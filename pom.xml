@@ -108,6 +108,6 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <build.number>${BUILD_NUMBER}</build.number>
+        <build.number>1</build.number>
     </properties>
 </project>
