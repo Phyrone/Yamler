@@ -4,12 +4,10 @@ import helper.TestItemStack;
 import net.cubespace.Yamler.Config.YamlConfig;
 import org.bukkit.Material;
 import org.bukkit.enchantments.Enchantment;
+import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.meta.ItemMeta;
 
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /**
  * The test configuration to check for a correct working ItemStack.
@@ -44,6 +42,21 @@ public class ItemStackTestConfig extends YamlConfig {
 
             @Override
             public void setDisplayName(String s) {
+            }
+
+            @Override
+            public boolean hasLocalizedName() {
+                return false;
+            }
+
+            @Override
+            public String getLocalizedName() {
+                return null;
+            }
+
+            @Override
+            public void setLocalizedName(String s) {
+
             }
 
             @Override
@@ -95,6 +108,36 @@ public class ItemStackTestConfig extends YamlConfig {
             @Override
             public boolean hasConflictingEnchant(Enchantment enchantment) {
                 return false;
+            }
+
+            @Override
+            public void addItemFlags(ItemFlag... itemFlags) {
+
+            }
+
+            @Override
+            public void removeItemFlags(ItemFlag... itemFlags) {
+
+            }
+
+            @Override
+            public Set<ItemFlag> getItemFlags() {
+                return null;
+            }
+
+            @Override
+            public boolean hasItemFlag(ItemFlag itemFlag) {
+                return false;
+            }
+
+            @Override
+            public boolean isUnbreakable() {
+                return false;
+            }
+
+            @Override
+            public void setUnbreakable(boolean b) {
+
             }
 
             @Override

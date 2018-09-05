@@ -2,11 +2,13 @@ package helper;
 
 import org.bukkit.Material;
 import org.bukkit.enchantments.Enchantment;
+import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 /**
  * An implementation of the default Bukkit {@link ItemStack} to provide
@@ -44,6 +46,21 @@ public class TestItemStack extends ItemStack {
 
                 @Override
                 public void setDisplayName(String s) {
+                }
+
+                @Override
+                public boolean hasLocalizedName() {
+                    return false;
+                }
+
+                @Override
+                public String getLocalizedName() {
+                    return null;
+                }
+
+                @Override
+                public void setLocalizedName(String s) {
+
                 }
 
                 @Override
@@ -93,6 +110,36 @@ public class TestItemStack extends ItemStack {
                 @Override
                 public boolean hasConflictingEnchant(Enchantment enchantment) {
                     return false;
+                }
+
+                @Override
+                public void addItemFlags(ItemFlag... itemFlags) {
+
+                }
+
+                @Override
+                public void removeItemFlags(ItemFlag... itemFlags) {
+
+                }
+
+                @Override
+                public Set<ItemFlag> getItemFlags() {
+                    return null;
+                }
+
+                @Override
+                public boolean hasItemFlag(ItemFlag itemFlag) {
+                    return false;
+                }
+
+                @Override
+                public boolean isUnbreakable() {
+                    return false;
+                }
+
+                @Override
+                public void setUnbreakable(boolean b) {
+
                 }
 
                 @Override
